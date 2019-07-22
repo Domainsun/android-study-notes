@@ -16,12 +16,14 @@
         app:tl_indicator_corner_radius="1.5dp"
         app:tl_indicator_height="2dp"
         app:tl_indicator_width="30dp"
+        app:tl_tab_width="100dp"
         app:tl_tab_padding="5dp"
         app:tl_tab_space_equal="true"
         tl_indicator_width_equal_title="true"
         app:tl_textSelectColor="@color/colorAccent"
         app:tl_textUnselectColor="@color/colorPrimaryDark"
-        app:tl_textsize="14sp" />
+        app:tl_textsize="14sp"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp"

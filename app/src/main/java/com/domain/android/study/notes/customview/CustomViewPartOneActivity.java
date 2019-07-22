@@ -40,7 +40,8 @@ public class CustomViewPartOneActivity extends BaseActivity {
     @BindView(R.id.vp)
     ViewPager vp;
 
-    String titls[]={"画颜色","画圆圈","画矩形"};
+    String titls[]={"画颜色","画圆圈","画矩形","画点","画椭圆","画线","画圆角矩形","画弧形 扇形","画bitmap"};
+
     ArrayList<Fragment> fragments = new ArrayList<Fragment>();
     public static void start(Context context) {
         Intent starter = new Intent(context, CustomViewPartOneActivity.class);
@@ -67,9 +68,16 @@ public class CustomViewPartOneActivity extends BaseActivity {
      * 初始化viewpager
      */
     private void initViewPager(){
+
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_color));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_circle));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_rect));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_point));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_oval));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_line));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_round_rect));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_arc));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_bitmap));
 
         tab.setViewPager(vp,titls,this,fragments);
     }
