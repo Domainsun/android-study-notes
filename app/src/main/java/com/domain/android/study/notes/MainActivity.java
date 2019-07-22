@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.domain.android.study.notes.customview.CustomViewPartOneActivity;
+import com.domain.android.study.notes.customview.CustomViewPartTwoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.tv)
     public void onViewClicked() {
 
-        CustomViewPartOneActivity.start(this);
+        CustomViewPartTwoActivity.start(this);
 
     }
 }

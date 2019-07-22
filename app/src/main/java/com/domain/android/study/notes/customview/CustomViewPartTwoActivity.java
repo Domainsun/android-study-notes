@@ -2,21 +2,17 @@ package com.domain.android.study.notes.customview;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.widget.TextView;
 
 import com.domain.android.study.notes.R;
-import com.domain.android.study.notes.base.ActivityManager;
 import com.domain.android.study.notes.base.BaseActivity;
 import com.flyco.tablayout.SlidingTabLayout;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -24,11 +20,11 @@ import butterknife.OnClick;
  *     author : domain
  *     e-mail : sunlongyue@foxmail.com
  *     time   : 2019/07/12
- *     desc   :
+ *     desc   : 画笔 paint 操作
  *     version: 1.0
  * </pre>
  */
-public class CustomViewPartOneActivity extends BaseActivity {
+public class CustomViewPartTwoActivity extends BaseActivity {
 
 
     @BindView(R.id.tv_back)
@@ -40,11 +36,11 @@ public class CustomViewPartOneActivity extends BaseActivity {
     @BindView(R.id.vp)
     ViewPager vp;
 
-    String titls[]={"画颜色","画圆圈","画矩形","画点","画椭圆","画线","画圆角矩形","画弧形 扇形","画bitmap"};
+    String titls[]={"线性渐变","中央辐射渐变","扫描渐变","bitmap 填充","bitmap叠加填充","画线","画圆角矩形","画弧形 扇形","画bitmap"};
 
     ArrayList<Fragment> fragments = new ArrayList<Fragment>();
     public static void start(Context context) {
-        Intent starter = new Intent(context, CustomViewPartOneActivity.class);
+        Intent starter = new Intent(context, CustomViewPartTwoActivity.class);
         context.startActivity(starter);
     }
 
@@ -55,7 +51,7 @@ public class CustomViewPartOneActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        tvTitle.setText("Canvas 使用");
+        tvTitle.setText("Paint 使用");
         initViewPager();
     }
 
@@ -70,11 +66,11 @@ public class CustomViewPartOneActivity extends BaseActivity {
      */
     private void initViewPager(){
 
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_color));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_circle));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_rect));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_point));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_oval));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_linear_gradient));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_radial_gradient));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_sweep_gradient));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_bitmap_shader));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_compose_shader));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_line));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_round_rect));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_arc));
