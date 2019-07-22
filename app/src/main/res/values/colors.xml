@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#129be9</color> <!--主颜色-->
+    <color name="colorPrimaryDark">#1373e9</color> <!--深蓝色-->
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>
