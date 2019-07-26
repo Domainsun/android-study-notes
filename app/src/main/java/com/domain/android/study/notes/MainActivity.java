@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.domain.android.study.notes.customview.CustomViewPartHomeActivity;
 import com.domain.android.study.notes.customview.CustomViewPartOneActivity;
 import com.domain.android.study.notes.customview.CustomViewPartTwoActivity;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.tv)
     public void onViewClicked() {
 
-        CustomViewPartTwoActivity.start(this);
+        CustomViewPartHomeActivity.start(this);
 
     }
 }

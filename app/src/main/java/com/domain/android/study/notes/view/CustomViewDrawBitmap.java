@@ -45,7 +45,6 @@ public class CustomViewDrawBitmap extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-
         Drawable drawable = ContextCompat.getDrawable(getContext(), R.mipmap.icon_circle_shadow);
         if (drawable != null) {
             Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();

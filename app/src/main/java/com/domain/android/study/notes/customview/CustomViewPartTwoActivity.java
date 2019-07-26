@@ -26,7 +26,6 @@ import butterknife.OnClick;
  */
 public class CustomViewPartTwoActivity extends BaseActivity {
 
-
     @BindView(R.id.tv_back)
     TextView tvBack;
     @BindView(R.id.tv_title)
@@ -36,9 +35,10 @@ public class CustomViewPartTwoActivity extends BaseActivity {
     @BindView(R.id.vp)
     ViewPager vp;
 
-    String titls[]={"线性渐变","中央辐射渐变","扫描渐变","bitmap 填充","bitmap叠加填充","画线","画圆角矩形","画弧形 扇形","画bitmap"};
+    String titles[]={"线性渐变","中央辐射渐变","扫描渐变","bitmap 填充","bitmap叠加填充","线条形状","轮廓风格","绘制阴影"};
 
     ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+
     public static void start(Context context) {
         Intent starter = new Intent(context, CustomViewPartTwoActivity.class);
         context.startActivity(starter);
@@ -71,11 +71,10 @@ public class CustomViewPartTwoActivity extends BaseActivity {
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_sweep_gradient));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_bitmap_shader));
         fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_compose_shader));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_line));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_round_rect));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_arc));
-        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_draw_bitmap));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_line_shape));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_profile));
+        fragments.add(CustomeViewFragment.newInstance(R.layout.custom_view_shadow_layer));
 
-        tab.setViewPager(vp,titls,this,fragments);
+        tab.setViewPager(vp, titles,this,fragments);
     }
 }

@@ -20,6 +20,9 @@
 
         <activity android:name=".customview.CustomViewPartOneActivity"/>
         <activity android:name=".customview.CustomViewPartTwoActivity"/>
+        <activity android:name=".customview.CustomViewPartThreeActivity"/>
+        <activity android:name=".customview.CustomViewPartFourActivity"/>
+        <activity android:name=".customview.CustomViewPartHomeActivity"/>
     </application>
 
 </manifest>
