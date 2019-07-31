@@ -82,7 +82,7 @@ public class CustomViewDrawRect extends View {
                     paint.setColor(Color.WHITE);
                 }
 
-//                paint.setColor(Color.parseColor(getRandColorCode()));
+//                textPaint.setColor(Color.parseColor(getRandColorCode()));
                 canvas.drawRect(r, paint);
 
             }

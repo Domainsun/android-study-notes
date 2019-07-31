@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidStudyNotes</string>
+    <string name="about_android_study_notes">AndroidStudyNotes\n
+        是本人学习安卓知识点的时候\n
+        配套的学习代码\n
+        对开发工作中使用到的知识\n
+        和研究android的一些新技术做的一些小demo和总结</string>
 </resources>
